@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html lang="uk" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Альона Ананьєва | Фотограф</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              'mulish': ['Mulish', 'sans-serif'],
+              'playfair': ['"Playfair Display"', 'serif'],
+            },
+            colors: {
+              brand: {
+                primary: '#c87137',
+                'primary-hover': '#d4845a',
+                dark: '#1a1a1a',
+                'light-bg': '#fefefe',
+                'soft-bg': '#fff8f2',
+                'text-primary': '#2d2d2d',
+                'text-secondary': '#5a5a5a',
+              }
+            },
+            keyframes: {
+              fadeInUp: {
+                'from': { opacity: '0', transform: 'translateY(40px)' },
+                'to': { opacity: '1', transform: 'translateY(0)' },
+              },
+              float: {
+                '0%, 100%': { transform: 'translateY(0) scale(1)' },
+                '50%': { transform: 'translateY(-30px) scale(1.05)' },
+              },
+              pulse: {
+                '0%, 100%': { opacity: '1', width: '80px' },
+                '50%': { opacity: '0.6', width: '120px' },
+              },
+              zoomIn: {
+                'from': { transform: 'scale(0.8)', opacity: '0' },
+                'to': { transform: 'scale(1)', opacity: '1' },
+              }
+            },
+            animation: {
+              fadeInUp: 'fadeInUp 1.2s ease-out',
+              float: 'float 8s ease-in-out infinite',
+              'float-reverse': 'float 10s ease-in-out infinite reverse',
+              pulse: 'pulse 2s ease-in-out infinite',
+              zoomIn: 'zoomIn 0.3s ease',
+            }
+          }
+        }
+      }
+    </script>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="font-mulish text-brand-text-primary bg-brand-light-bg antialiased">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
